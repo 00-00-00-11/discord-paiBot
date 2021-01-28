@@ -1,0 +1,11 @@
+{
+    "commands":{
+        "ping":"Pong!",
+        "coins":"**$0** has `$1` coins"
+    },
+    "errors":{
+        "userHasNoPermission":"you dont have permissions ($0) to use this command",
+        "userNotInDb":"there's no $0 in my database :c",
+        "youAreNotInDb":"looks like you are not in database, please connect with <@242964924949594112>"
+    }
+}
