@@ -1,11 +1,26 @@
 {
     "commands":{
         "ping":"Pong!",
-        "coins":"**$0** has `$1` coins"
+        "coins":"**$0** has `$1` coins",
+        "shop":{
+            "header":"🏪 Server Shop",
+            "body":"**Price**: $0 coins \n Write `!buy $1` to buy"
+        },
+        "buy":{
+            "customRole":{
+                "name":"Custom role",
+                "notEnoughCoins":"You dont have enough coins",
+                "tooMuchRoles":"You have maximum custom roles",
+                "success":"You've successfully purchased custom role"
+            }
+        }
     },
     "errors":{
         "userHasNoPermission":"you dont have permissions ($0) to use this command",
         "userNotInDb":"there's no $0 in my database :c",
         "youAreNotInDb":"looks like you are not in database, please connect with <@242964924949594112>"
+    },
+    "shop":{
+        "customRole": " Custom role for a month"
     }
 }

@@ -12,8 +12,8 @@ module.exports = async (msg, client) => {
     const matchedPrefix = msg.content.toLowerCase().match(prefixRegex)
     if (!matchedPrefix) return
 
-    const message = msg.content.toLowerCase().substring(matchedPrefix[0].length).trim()
-    const args = message.split(/ +/)
+    const message = msg.content.substring(matchedPrefix[0].length).trim()
+    const args = message.toLowerCase().split(/ +/)
 
     const command = client.commands.find(
         command => command.name === args[0] || command.aliases?.includes(args[0]) || command.regexp?.test(message)
@@ -37,5 +37,5 @@ module.exports = async (msg, client) => {
     }
 
     if (!!command.permission && !msg.member.hasPermission(command.permission)) return msg.reply(noPermission)
-    else await command.run(msg, args.slice(1), message)
+    else await command.run(msg, client, message)
 }
