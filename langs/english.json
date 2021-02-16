@@ -1,4 +1,5 @@
 {
+    "code":"en-US",
     "commands":{
         "ping":"Pong!",
         "coins":"**$0** has `$1` coins",
@@ -13,6 +14,14 @@
                 "tooMuchRoles":"You have maximum custom roles",
                 "success":"You've successfully purchased custom role"
             }
+        },"role":{
+            "description":"**Your custom roles:**",
+            "field":"**Ends:** ",
+            "usage":"Usage:",
+            "usageDescription":"**!role** `[role number]` `[color / name]` `[#hex color / role name]`",
+            "noSuchRole":"You dont have custom role with such number",
+            "wrongHex":"Wrong #HEX color",
+            "success":"Custom role was successfully changed"
         }
     },
     "errors":{

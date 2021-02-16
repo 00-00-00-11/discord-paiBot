@@ -7,7 +7,7 @@ module.exports = {
     async activate(message, client) {
         let user = (await Member.find({ 'info.id': message.member.id }))[0]
         if (user.stats.coins < this.price) return message.channel.send(message.lang.get('commands.buy.customRole.notEnoughCoins'))
-        if ((await Role.find({ roleID: message.member.id })).length < 3)
+        if ((await Role.find({ roleID: message.member.id })).length > 3)
             return message.channel.send(message.lang.get('commands.buy.customRole.tooMuchRoles'))
         let discordRole = await message.guild.roles.create({
             data: { name: message.lang.get('commands.buy.customRole.name'), position: message.guild.roles.cache.size - 1 },
